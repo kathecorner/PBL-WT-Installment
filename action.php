@@ -6,9 +6,8 @@ $payments_data = $_POST;
 //echo $payments_data;
 
 $additional_data = [
-    //'reference' => 'KenjiW001',
     'reference' => $_POST['REF'].date("Ymt").'/'.time(),
-    'merchantAccount' => 'KenjiW',
+    'merchantAccount' => '',
     'amount' => [
         'value' => $_POST['amount'],
         'currency' => 'JPY'
