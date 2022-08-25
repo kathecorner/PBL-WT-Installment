@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PayByLinkで分割払いを選択肢にする</title>
+    <style>
+    H3 {
+      color: #364e96;/*文字色*/
+      padding: 0.5em 0;/*上下の余白*/
+      border-top: solid 3px #364e96;/*上線*/
+      border-bottom: solid 3px #364e96;/*下線*/
+    }
+    label {
+      position: relative;
+      padding: 8px 15px;
+      margin-left: 40px;
+      background: #def3ff;
+      border-radius: 20px;
+    }
+    input {
+      position: relative;
+      padding: 8px 15px;
+      margin-left: 40px;
+      background: #aef3ff;
+      border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+
+<H3><p>PayByLinkで分割払いを選択肢にする</p></H3>
+
+<form action="action.php" method="post">
+  <label for="SRN">価格(日本円)    : </label>
+  <input type="text" name="amount"><br>
+    <label for="REF">リファレンス番号:(自動的に日付時刻が入ります) </label>
+    <input type="text" name="REF"><br>
+    <label for="SRN">既存のお客様の認識番号(Shopper Reference): </label>
+    <input type="text" name="SRN"><br>
+    <label for="SRN">商品詳細: </label>
+    <input type="text" name="DESC"><br><br>
+
+    データ入力後、押してください＝＞
+    <input type="submit" name="send" value="支払いリンク作成">
+</form>
+</body>
+</html>
