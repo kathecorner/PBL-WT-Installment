@@ -74,7 +74,7 @@ $arr = json_decode($payments_response,true);
 
 header('Content-Type: application/json');
 echo $arr['url'];
-//echo $payments_response;
+echo $payments_response;
 $pipe = popen("clip", "w");
 fwrite($pipe, $arr['url']);
 pclose($pipe);
